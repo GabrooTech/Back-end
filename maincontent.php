@@ -34,27 +34,237 @@
             <div class="main_list_name main_list_name_color_md">MOBILE DEVICE </div>
         </div>
     </div>
+    <div class="sale_text">
+        <h1>Sale ↓</h1>
+    </div>
     <section class="card_section">
-        <div class="card">
-            <div class="special_deal">50%</div>
-            <div class="card_img_box">
-                <img src="img/test.png" alt="check your internet connection">
+        <div class="box box_sale">
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">1</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
             </div>
-            <div class="content_box">
-                <h3 class="product_name">Wireless Headphones</h3>
-                <h2 class="product_price">₾329</h2>
-                <a href="#" class="add_to_cart add_button"><span>Add to Cart</span></a>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">2</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card card_3">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/redheadst.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">3</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">4</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">5</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">6</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">7</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">Wireless Headphones</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">Wireless Headphones</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">Wireless Headphones</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card_img_box">
-                <img src="img/gmouse.png" alt="check your internet connection">
+    </section>
+    <div class="sale_text">
+        <h1>Trending ↓</h1>
+    </div>
+    <section class="card_section">
+        <div class="box trending_box">
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">1</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
             </div>
-            <div class="content_box">
-                <h3 class="product_name">Wireless Headphones</h3>
-                <h2 class="product_price">₾280</h2>
-                <a href="#" class="add_to_cart add_button"><span>Add to Cart</span></a>
-                <div></div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">2</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card card_3">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/redheadst.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">3</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">4</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">5</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">6</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">7</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">Wireless Headphones</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="special_deal">50%</div>
+                <div class="card_img_box">
+                    <img src="img/test.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">Wireless Headphones</h3>
+                    <h2 class="product_price">₾329</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card_img_box">
+                    <img src="img/gmouse.png" alt="check your internet connection">
+                </div>
+                <div class="content_box">
+                    <h3 class="product_name">Wireless Headphones</h3>
+                    <h2 class="product_price">₾280</h2>
+                    <a href="#" class="add_to_cart add_button"><span>Check out</span></a>
+                    <div></div>
+                </div>
             </div>
         </div>
     </section>

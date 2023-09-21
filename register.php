@@ -106,7 +106,13 @@
                     <label for="passwords" class="label">Password</label>
                     <div class="red-text"><?php echo $errors['passwords']; ?></div>
                 </div>
-                <button class="login_button reveal" type="submit" name="submit" value="submit">Sign up</button>
+                <div class="buttonero">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <button class="button_test" type="submit" name="submit" value="submit">Sign up</button>
+                </div>
                 <div class="register">
                     <p>Get back to the <a href="login.php">login Page</a></p>
                 </div>

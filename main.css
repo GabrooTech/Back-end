@@ -642,9 +642,9 @@ transition: 1s all ease;
     background: #47418a;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75);
+    /* box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75); */
     border: 1px solid grey;
 }
 .card::before{
@@ -658,9 +658,27 @@ transition: 1s all ease;
     transform: skewY(345deg);
     transition: 0.3s ease-in-out;
 }
+.card_2::before{
+    background-color: #389dcf;
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform: skewY(345deg);
+    transition: 0.3s ease-in-out;
+}
+.card_3::before{
+    background-color: #a11616;
+}
 .card:hover::before{
     top: -70%;
     transform: skewY(390deg);
+}
+.card:hover > .special_deal{
+    color: black;
+    background-color: white;
 }
 .card::after{
     content: 'JRL';
@@ -677,12 +695,37 @@ transition: 1s all ease;
     transform: rotate(345deg);
     transition: 0.3s ease-in-out;
 }
+.card_2::after{
+    content: 'LOG';
+    position: absolute;
+    bottom: 50px;
+    left: 75px;
+    font-weight: 600;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.1);
+    -webkit-transform: rotate(345deg);
+    -moz-transform: rotate(345deg);
+    -ms-transform: rotate(345deg);
+    -o-transform: rotate(345deg);
+    transform: rotate(345deg);
+    transition: 0.3s ease-in-out;
+}
+.card_3::after{
+    content: 'PNG';
+}
 .card:hover::after{
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    transform: rotate(40deg);
+    color: #0c5a89;
+}
+.card_2:hover::after{
+    color: #389dcf;
+}
+.card_3:hover::after{
+    color: #a11616;
 }
 .card .card_img_box{
     position: relative;
@@ -709,9 +752,11 @@ transition: 1s all ease;
     height: 125px;
 }
 .card_section{
-    margin-top: 100px;
+    margin-top: 35px;
     display: flex;
     gap: 100px;
+    overflow: hidden;
+    padding: 25px;
 }
 .card .content_box{
     position: relative;
@@ -833,17 +878,119 @@ transition: 1s all ease;
 .special_deal{
     width: 40px;
     height: 30px;
-    border: 1px solid black;
-    position: relative;
+    position: absolute;
     border-radius: 8px;
     text-align: center;
     float: right;
     display: flex;
+    background-color: burlywood;
+    color: white;
     z-index: 1;
+    margin-left: 10px;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    transition: 0.3s ease-in-out;
 }
+.card_section{
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.box{
+    display: flex;
+    gap: 100px;
+    transition: 3s ease-in-out;
+    /* overflow-x: auto; */
+}
+.card_section:hover .box{
+    animation-play-state: paused;
+}
+.box::-webkit-scrollbar{
+    width: 0;
+}
+.sale_text{
+    margin-top: 50px;
+    font-family: monospace;
+    display: flex;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.trending_box{
+    translate: -2040px;
+}
+.buttonero{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(108, 104, 187);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    cursor: pointer;
+    margin-left: 97px;
+}
+.buttonero:hover{
+    background: rgb(108, 104, 187);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px   rgb(108, 104, 187),
+                0 0 25px  rgb(108, 104, 187),
+                0 0 50px  rgb(108, 104, 187),
+                0 0 100px rgb(108, 104, 187);
+}
+.buttonero span{
+    position: absolute;
+    display: block;
+}
+buttonero span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(108, 104, 187));
+    animation: btn-anim1 1s linear infinite;
+}
+
+.buttonero span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(108, 104, 187));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+.buttonero span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgb(108, 104, 187));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+.buttonero span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(108, 104, 187));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+.button_test{
+    background: none;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}  
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -885,9 +1032,24 @@ transition: 1s all ease;
         display: block;
     }
 }
-@media (max-height: 1300px) {
+@media (max-width: 1300px) {
     .slider{
         margin-top: 600%;
+    }
+    .test:hover{
+        background: none;
+    }
+    .test:hover .bx{
+        color: white;
+    }
+    .test:hover > .tooltip_asigner::after{
+        display: none;
+    }
+    .test:hover > .tooltip_asigner::before{
+        display: none;
+    }
+    .tooltip{
+        transition: 0s;
     }
 }
 @media (max-height: 1200px) {
@@ -970,6 +1132,9 @@ transition: 1s all ease;
         max-width: 900px;
         right: -40px;
     }
+    .box{
+        margin-left: 45px;
+    }
 }
 @media (max-width: 1080px){
     .main_container{
@@ -1006,8 +1171,17 @@ transition: 1s all ease;
     .main_list .main_list_item .main_list_name{
         font-size: 25px;
     }
+    .box{
+        margin-left: -30px;
+    }
 }
-/* animation test site */
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*                                              ANIMATION                                                           */
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @keyframes gradient {
     0% {
       background: radial-gradient(circle at center, rgba( 255, 125 , 125, 0 ) 0%, #fff 0%, #fff 100%);
@@ -1026,9 +1200,35 @@ transition: 1s all ease;
       background: radial-gradient(circle at center, #f88 99%, #fff 100%, #fff 100%);
     }
   }
-  /* .main_list_item:hover {
-    animation: gradient 10ms;
-    background: #11101d;
-    color: #fff;
-    box-shadow: none;
-  } */
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+}
+@keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+}
+@keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+}
+@keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+}

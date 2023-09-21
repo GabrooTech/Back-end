@@ -30,8 +30,7 @@ toogler(x)
 //   }
 // }
 // setInterval(move, 5000)
-var card = document.querySelector('.card')
-var box = document.querySelector(".box");
+var box = document.querySelector(".box_sale");
 var locator = ["0px","-280px","-630px","-985px","-1335px","-1685px","-2040px"]
 var counter = 0;
 
@@ -50,3 +49,24 @@ var myTimer = setInterval(changer, 5000)
 box.addEventListener("mouseover", function(){ clearInterval(myTimer)});
 // Start a new timer when mouse out
 box.addEventListener("mouseout", function(){ myTimer = setInterval(changer, 5000);});
+
+var trending_box = document.querySelector(".trending_box");
+var locatorReverse = ["-2040px","-1685px","-1335px","-985px","-630px","-280px","0px"]
+var counterReverse = 0;
+
+function changerRevers(){
+  if(counterReverse < 7){
+    counterReverse++;
+    }else{
+      counterReverse = 0;
+    }
+
+    trending_box.style.translate = locatorReverse[counterReverse];
+    console.log(counterReverse)
+};
+var myTimerReverse = setInterval(changerRevers, 5000)
+// Stop the current timer when mouseover
+trending_box.addEventListener("mouseover", function(){ clearInterval(myTimerReverse)});
+// Start a new timer when mouse out
+trending_box.addEventListener("mouseout", function(){ myTimerReverse = setInterval(changerRevers, 5000);});
+
