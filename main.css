@@ -899,7 +899,7 @@ transition: 1s all ease;
 .box{
     display: flex;
     gap: 100px;
-    transition: 3s ease-in-out;
+    transition: 0.3s ease-in-out;
     /* overflow-x: auto; */
 }
 .card_section:hover .box{
@@ -945,7 +945,7 @@ transition: 1s all ease;
     position: absolute;
     display: block;
 }
-buttonero span:nth-child(1) {
+.buttonero span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -991,6 +991,135 @@ buttonero span:nth-child(1) {
     width: 100%;
     height: 100%;
 }  
+.brands{
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    padding: 10px 10px;
+}
+.brand_card{
+    position: relative;
+    width: 203px;
+    height: 125px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #acacac;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brand_card:hover{
+    border: 1px solid #47418a;
+}
+.brand_card img{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+.view_list{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+.view_list button{
+    margin-top: 50px;
+}
+.custom_button{
+    background: #1f1685;
+    border: none;
+    z-index: 1;
+}
+.custom_button:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #11101d;
+  background-image: linear-gradient(315deg, #11101d 0%, #20196b 74%);
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5)
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.custom_button:hover {
+  color: #000;
+}
+.custom_button:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.custom_button:active {
+  top: 2px;
+}
+.view_button{
+    width: 130px;
+    height: 40px;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+.custom_button a{
+    text-decoration: none;
+    color: black;
+}
+.custom_button:hover a{
+    color: white;
+}
+.left_box{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.right_box{
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.right_box div{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.right_box div:hover{
+    color: white;
+    background-color: black;
+}
+.brand_box{
+    display: flex;
+    gap: 100px;
+    transition: 0.3s ease-in-out;
+}
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1172,7 +1301,32 @@ buttonero span:nth-child(1) {
         font-size: 25px;
     }
     .box{
-        margin-left: -30px;
+        margin-left: -65px;
+    }
+    .brand_box{
+        margin-left: 50px;
+    }
+    .sale_text h1{
+        font-size: 18px;
+    }
+    .right_box div{
+        width: 30px;
+        height: 30px;
+    }
+    .view_list{
+        justify-content: center;
+        gap: 35px;
+    }
+    .custom_button{
+        scale: 0.8;
+    }
+    .left_box{
+        gap: 20px;
+    }
+}
+@media (max-width: 530px){
+    .sale_text h1{
+        font-size: 10px;
     }
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

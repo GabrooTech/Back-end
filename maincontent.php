@@ -34,8 +34,17 @@
             <div class="main_list_name main_list_name_color_md">MOBILE DEVICE </div>
         </div>
     </div>
-    <div class="sale_text">
-        <h1>Sale ↓</h1>
+    <div class="view_list sale_view_list">
+        <div class="left_box">
+            <div class="sale_text">
+                <h1>Sale ↓</h1>
+            </div>
+            <button class="view_button custom_button"><a href="#">View More</a></button>
+        </div>
+        <div class="right_box">
+            <div class="left_arrow sale_back">←</div>
+            <div class="right_arrow sale_next">→</div>
+        </div>
     </div>
     <section class="card_section">
         <div class="box box_sale">
@@ -151,8 +160,17 @@
             </div>
         </div>
     </section>
-    <div class="sale_text">
-        <h1>Trending ↓</h1>
+    <div class="view_list trending_view_list">
+        <div class="left_box">
+            <div class="sale_text">
+                <h1>Trending ↓</h1>
+            </div>
+            <button class="view_button custom_button"><a href="#">View More</a></button>
+        </div>
+        <div class="right_box">
+            <div class="left_arrow trending_back">←</div>
+            <div class="right_arrow trending_next">→</div>
+        </div>
     </div>
     <section class="card_section">
         <div class="box trending_box">
@@ -267,5 +285,30 @@
                 </div>
             </div>
         </div>
+    </section>
+    <div class="view_list brands_view_list">
+        <div class="left_box">
+            <div class="sale_text">
+                <h1>Brands ↓</h1>
+            </div>
+            <button class="view_button custom_button"><a href="#">View More</a></button>
+        </div>
+        <div class="right_box">
+            <div class="left_arrow brand_back">←</div>
+            <div class="right_arrow brand_next">→</div>
+        </div>
+    </div>
+    <section class="brands">
+        <div class="brand_box">
+            <div class="brand_card"><img src="img/23.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/a4.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/chiefer.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/crown.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/defender.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/legrand.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/loc.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/patriot.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/samsung.png" alt="check internet connection"></div>
+            <div class="brand_card"><img src="img/segate.png" alt="check internet connection"></div>
     </section>
 </div>
