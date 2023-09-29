@@ -74,24 +74,106 @@ var arrowCounter = 0
 // Work Box
 saleNextBtn.addEventListener("click", () => {
   if(maxWidth > 1750){
-    if(arrowCounter < 5){
+    if(arrowCounter < 6){
       arrowCounter++;
     }else{
       arrowCounter = 0;
     }
-    box.style.translate = locator[arrowCounter];
+    box.style.translate = salelocatorPc[arrowCounter];
+  }else if(maxWidth <= 1750 && maxWidth > 1520){
+    if(arrowCounter < 7){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = saleLocatorPcSmall[arrowCounter];
+  }else if(maxWidth <= 1520 && maxWidth > 1080){
+    if(arrowCounter < 8){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePersonalBig[arrowCounter];
+  }else if(maxWidth <= 1080 && maxWidth > 750){
+    if(arrowCounter < 8){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePersonalSmall[arrowCounter];
+  }else if(maxWidth <= 750 && maxWidth > 530){
+    if(arrowCounter < 9){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePhoneBig[arrowCounter];
+  }else if(maxWidth <= 530){
+    if(arrowCounter < 9){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePhoneSmall[arrowCounter];
   }
 })
 saleBackBtn.addEventListener("click", () => {
   if(maxWidth > 1750){
-    if(arrowCounter < 5){
+    if(arrowCounter < 6){
       arrowCounter++;
     }else{
       arrowCounter = 0;
     }
-    box.style.translate = locatorReverse[arrowCounter];
+    box.style.translate = saleLocatorPcReversed[arrowCounter];
+  }else if(maxWidth <= 1750 && maxWidth > 1520){
+    if(arrowCounter < 6){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = saleLocatorPcSmallReversed[arrowCounter];
+  }else if(maxWidth <= 1520 && maxWidth > 1080){
+    if(arrowCounter < 8){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePersonalBigReversed[arrowCounter];
+  }else if(maxWidth <= 1080 && maxWidth > 750){
+    if(arrowCounter < 8){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePersonalSmallReversed[arrowCounter];
+  }else if(maxWidth <= 750 && maxWidth > 530){
+    if(arrowCounter < 9){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePhoneBigReversed[arrowCounter];
+  }else if(maxWidth <= 530){
+    if(arrowCounter < 9){
+      arrowCounter++;
+    }else{
+      arrowCounter = 0;
+    }
+    box.style.translate = salePhoneSmallReversed[arrowCounter];
   }
 })
+var salelocatorPc = ["0px","-280px","-629px","-985px","-1337px","-1687px","-2038px"]
+var saleLocatorPcReversed = ["-2038px","-1687px","-1337px","-985px","-629px","-280px","0px"]
+var saleLocatorPcSmall = ["0px","-280px","-629px","-985px","-1337px","-1687px","-2038px","-2238px"]
+var saleLocatorPcSmallReversed = ["0px","-2238px","-1891px","-1538px","-1187px","-833px","-481px"]
+var salePersonalBig = ["0px","-280px","-629px","-985px","-1337px","-1687px","-2038px","-2388px","-2700px"]
+var salePersonalBigReversed = ["0px","-2700px","-2388px","-2038px","-1687px","-1337px","-985px","-629px","-280px"]
+var salePersonalSmall = ["0px","-205px","-549px","-901px","-1252px","-1605px","-1954px","-2307px","-2667px","-2980px"]
+var salePersonalSmallReversed = ["0px","-2980px","-2667px","-2307px","-1954px","-1605px","-1252px","-901px","-549px","-205px"]
+var salePhoneBig = ["0px","-245px","-585px","-946px","-1293px","-1655px","-2016px","-2361px","-2700px","-3020px"]
+var salePhoneBigReversed = ["0px","-3020px","-2700px","-2361px","-2016px","-1655px","-1293px","-946px","-585px","-245px"]
+var salePhoneSmall = ["117px","-233px","-584px","-942px","-1290px","-1636px","-1992px","-2345px","-2696px","-3046px"]
+var salePhoneSmallReversed = ["117px","-3046px","-2696px","-2345px","-1992px","-1636px","-1290px","-942px","-584px","-245px"]
 // Work Box
 saleArrowBox.addEventListener("mouseover", function(){ clearInterval(myTimer)});
 saleArrowBox.addEventListener("mouseout", function(){ myTimer = setInterval(changer, 5000);});
@@ -160,7 +242,7 @@ trendingBackBtn.addEventListener("click", () => {
     }
     trending_box.style.translate = trendinglocatorSwitchPcSmall[arrowCounterTrending];
   }else if(maxWidth <= 1520 && maxWidth > 1080){
-    if(arrowCounterTrending < 8){
+    if(arrowCounterTrending < 7){
       arrowCounterTrending++;
     }else{
       arrowCounterTrending = 0;
@@ -194,7 +276,7 @@ var trendinglocatorSwitchPcReversed = ["100px","100px","-280px","-640px","-990px
 var trendinglocatorSwitchPcSmall  = ["-2250px","-1700px","-1400px","-1000px","-700px","-300px","0px"]
 var trendinglocatorSwitchPcSmallReversed = ["0px","0px","-280px","-640px","-990px","-1340px","-1690px","-2040px","-2300px"]
 var trendinglocatorSwitchPersonalBig =  ["-2650px","-2700px","0px","-350px","-700px","-1050px","-1400px","-1750px","-2100px","-2450px"]
-var trendinglocatorSwitchPersonalBigReversed = ["-1900px","-1750px","-1400px","-1050px","-700px","-350px","-0px","-2700px","-2300px"]
+var trendinglocatorSwitchPersonalBigReversed = ["-1900px","-1750px","-1400px","-1050px","-700px","-350px","-0px","-2300px"]
 var trendinglocatorSwitchPersonalSmall = ["-2100px","-2500px","-2850px","0px","-350px","-710px","-1075px","-1425px","-1785px"]
 var trendinglocatorSwitchPersonalSmallReversed = ["-2140px","-1800px","-1440px","-1080px","-730px","-370px","0px","-2850px","-2490px"]
 var trendinglocatorSwitchPhoeBig = ["-2010px","-2358px","-2700px","-3041px","0px","-260px","-593px","-950px","-1291px","-1644px"]

@@ -1046,7 +1046,7 @@ transition: 1s all ease;
   z-index: -1;
   border-radius: 5px;
   background-color: #11101d;
-  background-image: linear-gradient(315deg, #11101d 0%, #20196b 74%);
+  background-image: linear-gradient(315deg, #11101d 0%, #47418a 74%);
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5)
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -1111,9 +1111,35 @@ transition: 1s all ease;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-.right_box div:hover{
+.right_box .sale_next:hover{
     color: white;
-    background-color: black;
+    background-color: #47418a;
+    border: 1px solid #47418a;
+}
+.right_box .sale_back:hover{
+    color: white;
+    background-color: #11101d;
+    border: 1px solid #11101d;
+}
+.right_box .trending_next:hover{
+    color: white;
+    background-color: #47418a;
+    border: 1px solid #47418a;
+}
+.right_box .trending_back:hover{
+    color: white;
+    background-color: #11101d;
+    border: 1px solid #11101d;
+}
+.right_box .brand_next:hover{
+    color: white;
+    background-color: #47418a;
+    border: 1px solid #47418a;
+}
+.right_box .brand_back:hover{
+    color: white;
+    background-color: #11101d;
+    border: 1px solid #11101d;
 }
 .brand_box{
     display: flex;
@@ -1307,7 +1333,7 @@ transition: 1s all ease;
         margin-left: 50px;
     }
     .sale_text h1{
-        font-size: 18px;
+        font-size: 20px;
     }
     .right_box div{
         width: 30px;
@@ -1322,11 +1348,6 @@ transition: 1s all ease;
     }
     .left_box{
         gap: 20px;
-    }
-}
-@media (max-width: 530px){
-    .sale_text h1{
-        font-size: 10px;
     }
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
