@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li class="aside_list">
-            <a href="#" class="aside_link">
+            <a href="dashboard.php" class="aside_link">
                 <div class="test">
                     <div class="dashboard_color tooltip_asigner">
                         <i class="bx bxs-dashboard null_txtdecor dashboard_center" >
