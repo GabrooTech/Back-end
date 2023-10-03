@@ -7,5 +7,6 @@
         <div></div>
     </footer>
     <script src="main.js"></script>
+    <script src="chart.js"></script>
     <script src="regform.js"></script>
 </body>
