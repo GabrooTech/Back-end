@@ -1574,7 +1574,6 @@ input:focus + .user_crud_label_i_email{
 .update_button{
     color: #fff;
     border-radius: 5px;
-    padding: 10px 25px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     background: transparent;
@@ -1592,8 +1591,8 @@ input:focus + .user_crud_label_i_email{
 }
 .update_button{
     position: relative;
-    right: 20px;
-    bottom: 20px;
+    right: 15px;
+    bottom: 12px;
     border:none;
     box-shadow: none;
     width: 70px;
