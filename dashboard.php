@@ -137,21 +137,76 @@
                     </div>
                 </div>
             </div>
-            <div class="first_chart">
+            <div class="first_chart" id="outsoucrce_linker">
                 <h1>Interes in products by sales</h1>
                 <div id="chart_div"></div>
             </div>
         </div>
         <div class="user_crud">
-            <!-- <form method="">
-                <div class="user_crud_grid">
-                    <div class="user_crud_username">
-                        <label for="username">Username</label>
-                        <input type="text" name="username">
-                    </div>
-                </div>
-            </form> -->
             <h2>User checkBoard</h2>
+            <div class="user_crud_main_grid_titles">
+            <div class="user_crud_user_id">
+                    <div class="username_title">id</div>
+                </div>
+                <div class="user_crud_user_name">
+                    <div class="username_title">name</div>
+                </div>
+                <div class="user_crud_user_email">
+                    <div class="username_title">email</div>
+                </div>
+                <div class="user_crud_user_password">
+                    <div class="username_title">password</div>
+                </div>
+                <div class="user_crud_user_type">
+                    <div class="username_title">user Type</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">Update</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">Delete</div>
+                </div>
+            </div>
+            <div class="user_crud_main_grid">
+                <?php 
+                    $resultcrud = mysqli_query($connection, "SELECT * FROM registration");
+                    if($resultcrud){
+                        while($row = mysqli_fetch_assoc($resultcrud)){
+                            $idcrud=$row['id'];
+                            $username=$row['username'];
+                            $email=$row['email'];
+                            $pass=$row['passwords'];
+                            $userType=$row['userType'];
+                            echo '
+                            <div class="user_crud_user_id">
+                                <div class="first_answer">'.$idcrud.'</div>
+                            </div>
+                            <div class="user_crud_user_name">
+                                <div class="first_answer">'.$username.'</div>
+                            </div>
+                            <div class="user_crud_user_email">
+                                <div class="first_answer">'.$email.'</div>
+                            </div>
+                            <div class="user_crud_user_password">
+                                <div class="first_answer">'.$pass.'</div>
+                            </div>
+                            <div class="user_crud_user_type">
+                                <div class="first_answer" id="userType">'.$userType.'</div>
+                            </div>
+                            <div class="user_crud_edit_button">
+                                <button class="update_button"><a href="update.php? updateid='.$idcrud.'"><span>Edit</span><span>Edit</span></a></button>
+                            </div>
+                            <div class="user_crud_edit_button">
+                                <button class="update_button"><a href="delete.php? deleteid='.$idcrud.'"><span>Delete</span><span>Delete</span></a></button>
+                            </div>
+                            ';
+                        }
+                    }
+            
+                
+                
+                ?>
+            </div>
         </div>
         <div class="curd_user_add_grid">
             <div class="user_crud_add_user">

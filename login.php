@@ -70,8 +70,8 @@
                 </div>
                 <div class="inputbox">
                     <input type="password" name="passwords" class="login_input" id="Password"  value="<?php echo htmlspecialchars($passwords)?>">
-                    <div class="show"> </div>
                     <i class='bx bxs-lock-alt' ></i>
+                    <div class="show"> </div>
                     <label for="passwords" class="label">Password</label>
                     <div class="red-text"><?php echo $errors['passwords'];?></div>
                 </div>
