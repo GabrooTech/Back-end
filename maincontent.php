@@ -4,7 +4,7 @@
 <div class="main_container">
     <div class="main_list">
         <div class="item_1 main_list_item">
-            <a href="#" class="pc_image_link"></a>
+            <a href="pclist.php" class="pc_image_link"></a>
             <img src="img\pc.webp" alt="Check your internet connection" class="list_img">   
             <div class="main_list_name main_list_name_color_pc">PC</div> 
         </div>

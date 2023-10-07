@@ -1,24 +1,25 @@
 <?php
-    // include('db_connect.php');
-    // session_start();
-    // $id = $_SESSION["id"];
-    // $result = mysqli_query($connection, "SELECT * FROM registration WHERE id = $id");
-    // $row = mysqli_fetch_array($result);
-    // if($row["userType"] != 'admin'){
-    //     header('Location: mainpage.php');
-    // }
-    // in case of guest there is no role so we need to asign coockies to make sure all visitors are tracked and checked
     include('db_connect.php');
     session_start();
+    $id = $_SESSION["id"];
+    $result = mysqli_query($connection, "SELECT * FROM registration WHERE id = $id");
+    $row = mysqli_fetch_array($result);
+    if($row["userType"] != 'admin'){
+        header('Location: mainpage.php');
+    }
+    // in case of guest there is no role so we need to asign coockies to make sure all visitors are tracked and checked
+    // include('db_connect.php');
+    // session_start();
     $username = $email = $passwords = $userType = '';
     $idcrud = $_GET['updateid'];
     $id = $_SESSION["id"];
     $result = mysqli_query($connection, "SELECT * FROM registration WHERE id = $idcrud");
     $row = mysqli_fetch_array($result);
-    $username=$row['username'];
-    $email=$row['email'];
-    $passwords=$row['passwords'];
+    $username = $row['username'];
+    $email = $row['email'];
+    $passwords = $row['passwords'];
     $usertype = $row['userType'];
+    // echo $usertype;
         if(isset($_POST['submit'])){
             $username = $_POST['username'];
             $email = $_POST['email'];
@@ -29,12 +30,8 @@
             // save to db and check
             if($resultcrud){
                 //succes
-                header('Location: dashboard.php');
-            }else{
-                echo "error";
+                header('Location: dashboard.php#outsoucrce_linker');
             }
-        }else{
-            echo "no submittttttttttt";
         }
 ?>
 
@@ -45,7 +42,7 @@
     include('aside.php');
     ?>
     <div class="user_crud_container">
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+        <form method="POST">
             <div class="form_box user_crud_style">
             <h2 class="user_crud_head_text">Update user's information</h2>
                 <div class="user_crud_username">
@@ -71,21 +68,22 @@
                     </div>
                     <div class="inputbox">
                         <label for="userType" class="user_crud_label">User_Type</label>
-                        <select class="user_crud_option_selector" name="userType" value="<?php echo htmlspecialchars($passwords)?>">
-                          <option hidden Selected></option>
+                        <select class="user_crud_option_selector" name="userType" value="<?php echo htmlspecialchars($usertype)?>">
+                          <!-- <option hidden Selected ></option> -->
                           <option class="user_crud_option_user">user</option>
                           <option class="user_crud_option_admin">admin</option>
                         </select>
                         <i class='bx bxs-user user_crud_label_i_user_type'></i>
                         <div class="red-text"></div>
                     </div>
-                    <div class="buttonero user_crud_sumbit">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <button class="button_test" type="submit" name="submit" value="submit"><a href="update.php? updateid='<?php $idcrud ?>'">Update</a></button>
-                </div>
+
+                    <?php echo '<button class="button_test" type="submit" name="submit" value="submit">
+                        <div class="buttonero user_crud_sumbit buttonero_fix"><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>                    
+                        <a class="user_crud_update_link"href="update.php? updateid='.$idcrud.'">Update</a></div>
+                    </button>' ?>
                 </div>
             </div>
         </form>

@@ -177,6 +177,9 @@
                             $email=$row['email'];
                             $pass=$row['passwords'];
                             $userType=$row['userType'];
+                            if($userType == "admin"){ 
+                                $userColorSelector = "user_type_admin";
+                            }else if($userType == "user"){ $userColorSelector = "user_type_user";}
                             echo '
                             <div class="user_crud_user_id">
                                 <div class="first_answer">'.$idcrud.'</div>
@@ -191,20 +194,17 @@
                                 <div class="first_answer">'.$pass.'</div>
                             </div>
                             <div class="user_crud_user_type">
-                                <div class="first_answer" id="userType">'.$userType.'</div>
+                                <div class="first_answer '.$userColorSelector.'" id="userType">'.$userType.'</div>
                             </div>
                             <div class="user_crud_edit_button">
-                                <button class="update_button"><a href="update.php? updateid='.$idcrud.'"><span>Edit</span><span>Edit</span></a></button>
+                                <button class="custom_for_button btn_9 ."><a href="update.php? updateid='.$idcrud.'">Edit</a></button>
                             </div>
                             <div class="user_crud_edit_button">
-                                <button class="update_button"><a href="delete.php? deleteid='.$idcrud.'"><span>Delete</span><span>Delete</span></a></button>
+                                <button class="custom_for_button btn_9"><a href="delete.php? deleteid='.$idcrud.'">Delete</a></button>
                             </div>
                             ';
                         }
                     }
-            
-                
-                
                 ?>
             </div>
         </div>
