@@ -7,7 +7,7 @@
 <html lang="en">
     <?php
     include('head.php');
-    include('header.php');
+    // include('header.php');
     include('aside.php');
     include('maincontent.php');
 
