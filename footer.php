@@ -14,7 +14,7 @@
                     <h2 class="common_footer_h2"><strong>In search of Incredible</strong></h2>
                 </div>
                 <div class="footer_first_section_common_grid">
-                    <h2 class="common_footer_h2"><a href="#">Contact Support</a></h2>
+                    <h2 class="common_footer_h2"><a href="support.php">Contact Support</a></h2>
                     <h2 class="common_footer_h2"><a href="privacy.php#findus_content">How to contact us</a></h2>
                     <h2 class="common_footer_h2"><a href="privacy.php#devuse_content">DevUse</a></h2>
                 </div>

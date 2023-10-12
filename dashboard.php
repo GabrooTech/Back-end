@@ -137,12 +137,12 @@
                     </div>
                 </div>
             </div>
-            <div class="first_chart" id="outsoucrce_linker">
+            <div class="first_chart">
                 <h1>Interes in products by sales</h1>
                 <div id="chart_div"></div>
             </div>
         </div>
-        <div class="user_crud">
+        <div class="user_crud" id="outsoucrce_linker">
             <h2>User checkBoard</h2>
             <div class="user_crud_main_grid_titles">
             <div class="user_crud_user_id">
@@ -208,6 +208,79 @@
                 ?>
             </div>
         </div>
+        <div class="user_crud" id="ticketsource_linker">
+            <h2>Support Tickets</h2>
+            <div class="user_crud_main_grid_titles_support">
+            <div class="user_crud_user_id">
+                    <div class="username_title">sender_user_id</div>
+                </div>
+                <div class="user_crud_user_name">
+                    <div class="username_title">reson</div>
+                </div>
+                <div class="user_crud_user_email">
+                    <div class="username_title">content</div>
+                </div>
+                <div class="user_crud_user_password">
+                    <div class="username_title">timestamp</div>
+                </div>
+                <div class="user_crud_user_type">
+                    <div class="username_title">state</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">Detailed</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">Solution</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">Delete</div>
+                </div>
+            </div>
+            <div class="user_crud_main_grid_support">
+                <?php 
+                    $supportresult = mysqli_query($connection, "SELECT * FROM support");
+                    if($supportresult){
+                        while($rowsupport = mysqli_fetch_assoc($supportresult)){
+                            $idresult=$rowsupport['id'];
+                            $reason=$rowsupport['reason'];
+                            $content=$rowsupport['content'];
+                            $ticketdate=$rowsupport['submit_time'];
+                            $ticketstate=$rowsupport['ticket_state'];
+                            $ticketid=$rowsupport['ticket_id'];
+                            if($ticketstate == "unsolved"){ 
+                                $stateColorSelector = "tikcet_state_outsource";
+                            }else if($ticketstate == "solved"){ $stateColorSelector = "tikcet_state_outsource_solved";}
+                            echo '
+                            <div class="user_crud_user_id">
+                                <div class="first_answer">'.$idresult.'</div>
+                            </div>
+                            <div class="user_crud_user_name">
+                                <div class="first_answer">'.$reason.'</div>
+                            </div>
+                            <div class="user_crud_user_email">
+                                <div class="first_answer string_counter">'.$content.'</div>
+                            </div>
+                            <div class="user_crud_user_password">
+                                <div class="first_answer">'.$ticketdate.'</div>
+                            </div>
+                            <div class="user_crud_user_type">
+                                <div class="first_answer support_ticket_color '.$stateColorSelector.'" id="userType">'.$ticketstate.'</div>
+                            </div>
+                            <div class="user_crud_edit_button">
+                                <button class="custom_for_button btn_9 ."><a href="update.php? updateid='.$idresult.'">Detail</a></button>
+                            </div>
+                            <div class="user_crud_edit_button">
+                                <button class="custom_for_button btn_9"><a href="solveticket.php? solveticketid='.$ticketid.'">Solve</a></button>
+                            </div>
+                            <div class="user_crud_edit_button">
+                                <button class="custom_for_button btn_9"><a href="ticket_delete.php? deletesupportid='.$ticketid.'">Delete</a></button>
+                            </div>
+                            ';
+                        }
+                    }
+                ?>
+            </div>
+        </div>
         <div class="curd_user_add_grid">
             <div class="user_crud_add_user">
                 <a href="crudadduser.php">
@@ -222,13 +295,13 @@
                 </a>
             </div>
         </div>
+        
         <div class="product_crud">PRODUCTS CRUD</div>
         <div class="second_chart_to_do_list">
             <div class="second_chart">SECOND CHART</div>
             <div class="to_do_list">TO DO LIST</div>
         </div>
     </div>
-
     
     <?php
     include('footer.php'); 
