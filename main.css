@@ -1791,7 +1791,7 @@ button.custom_for_button.btn_9 a{
 .filtered_products_variaties{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     gap: 15px;
@@ -2673,6 +2673,9 @@ footer{
     font-family: sans-serif;
     color: #441d6b;
 }
+.accessories_filter_fix{
+    gap: 0px;
+}
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -3422,9 +3425,7 @@ footer{
    16. add 2 working charts in dashboard.
    17. start outputing exact data into dashboard
    18. track visitors sum
+   19. implement dark theme
+   20. fix delay of loading
    (optional). search engine algorithm
-
-
-
-
 */

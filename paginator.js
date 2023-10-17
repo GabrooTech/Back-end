@@ -64,10 +64,8 @@ const search = () =>{
       let textvalue = match.textContent || match.innerHTML
       if(textvalue.toLocaleUpperCase().indexOf(searchbox) > -1){
         product[i].style.display = "";
-        search_issue.style.display = "none"
       }else{
         product[i].style.display = "none";
-        search_issue.style.display = "flex"
       }
     }
   }

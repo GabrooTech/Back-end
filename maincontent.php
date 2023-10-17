@@ -9,12 +9,12 @@
             <div class="main_list_name main_list_name_color_pc">PC</div> 
         </div>
         <div class="item_2 main_list_item">
-            <a href="#"></a>
+            <a href="servers.php"></a>
             <img src="img\servers.webp" alt="Check your internet connection" class="list_img">   
             <div class="main_list_name main_list_name_color_server">SERVERS</div>
         </div>
         <div class="item_3 main_list_item">
-            <a href="#"></a>
+            <a href="accessories.php"></a>
             <img src="img\accessories.webp" alt="Check your internet connection" class="list_img">   
             <div class="main_list_name main_list_name_color_accs">ACCESSORIES</div>
         </div>
