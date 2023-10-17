@@ -15,4 +15,5 @@
     include('footer.php');
     
     ?>
+    <script src="slidecount.js"></script>
 </html>

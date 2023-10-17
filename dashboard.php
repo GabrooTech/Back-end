@@ -267,7 +267,7 @@
                                 <div class="first_answer support_ticket_color '.$stateColorSelector.'" id="userType">'.$ticketstate.'</div>
                             </div>
                             <div class="user_crud_edit_button">
-                                <button class="custom_for_button btn_9 ."><a href="update.php? updateid='.$idresult.'">Detail</a></button>
+                                <button class="custom_for_button btn_9 ."><a href="ticket_detail.php? ticketDetailId='.$ticketid.'">Detail</a></button>
                             </div>
                             <div class="user_crud_edit_button">
                                 <button class="custom_for_button btn_9"><a href="solveticket.php? solveticketid='.$ticketid.'">Solve</a></button>
@@ -306,4 +306,5 @@
     <?php
     include('footer.php'); 
     ?>
+    <script src="chart.js"></script>
 </html>

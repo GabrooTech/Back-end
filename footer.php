@@ -37,7 +37,7 @@
                             <i class='bx bxl-facebook'></i>
                         </div>
                     </a>
-                    <a class="linked_socials_link linked_social_linkedin"  href="https://www.linkedin.com/?original_referer=https%3A%2F%2Frktds.net%2F">
+                    <a class="linked_socials_link linked_social_linkedin"  href="https://www.linkedin.com/in/george-gabriadze-66a16b296/">
                         <div class="soical_common">
                             <i class='bx bxl-linkedin'></i>
                         </div>
@@ -65,6 +65,5 @@
         </div>
     </footer>
     <script src="main.js"></script>
-    <script src="chart.js"></script>
     <script src="regform.js"></script>
 </body>
