@@ -1,6 +1,6 @@
 // paginator
 const ulTag = document.getElementById("pgul")
-let totalPages = 15;  
+let totalPages = 3;  
 function element(totalPages, page){
   let liTag = ''  
   let activeLi

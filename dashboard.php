@@ -289,9 +289,9 @@
                 </a>
             </div>
             <div class="product_crud_add_user">
-            <a href="#">
+            <a href="addproduct.php">
                     <i class='bx bx-plus plus_sign'></i>
-                    <a href="#">Add Product</a>
+                    <a href="addproduct.php">Add Product</a>
                 </a>
             </div>
         </div>
