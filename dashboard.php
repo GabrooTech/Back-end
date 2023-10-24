@@ -30,7 +30,24 @@
         </div>
         <div class="main_info_box">
                 <div class="main_info_left_box">
-                    <p>725</p>
+                    <?php 
+                    $products_result = mysqli_query($connection, "SELECT * FROM products");
+                    if($products_result){
+                         while($products_row = mysqli_fetch_assoc($products_result)){
+                             $id_product_result=$products_row['product_id'];
+                             $id_product_result = new ArrayObject(
+                                array($id_product_result)
+                             );
+                             $count = $id_product_result->count();
+                               for ($i =0; $i<=strlen($count);$i++){  
+                                $rem=$count%10;  
+                                $sum = $sum + $rem;  
+                                $count=$count/10;  
+                            }
+                         }
+                        echo '<p>'.$sum.'</p>';
+                    }
+                    ?>
                     <h2>Products</h2>
                 </div>
                 <div class="main_info_right_box">
@@ -137,13 +154,13 @@
                     </div>
                 </div>
             </div>
-            <div class="first_chart">
+            <!-- <div class="first_chart">
                 <h1>Interes in products by sales</h1>
                 <div id="chart_div"></div>
-            </div>
+            </div> -->
         </div>
         <div class="user_crud" id="outsoucrce_linker">
-            <h2>User checkBoard</h2>
+            <h2>Users</h2>
             <div class="user_crud_main_grid_titles">
             <div class="user_crud_user_id">
                     <div class="username_title">id</div>
@@ -249,7 +266,9 @@
                             $ticketid=$rowsupport['ticket_id'];
                             if($ticketstate == "unsolved"){ 
                                 $stateColorSelector = "tikcet_state_outsource";
-                            }else if($ticketstate == "solved"){ $stateColorSelector = "tikcet_state_outsource_solved";}
+                            }else if($ticketstate == "solved"){ 
+                                $stateColorSelector = "tikcet_state_outsource_solved";
+                            }
                             echo '
                             <div class="user_crud_user_id">
                                 <div class="first_answer">'.$idresult.'</div>
@@ -281,6 +300,83 @@
                 ?>
             </div>
         </div>
+        <div class="user_crud" id="product_source_linker">
+        <h2>Products</h2>
+            <div class="user_crud_main_grid_titles product_crud_variant">
+            <div class="user_crud_user_id">
+                    <div class="username_title">product id</div>
+                </div>
+                <div class="user_crud_user_name">
+                    <div class="username_title">img</div>
+                </div>
+                <div class="user_crud_user_email">
+                    <div class="username_title">product name</div>
+                </div>
+                <div class="user_crud_user_password">
+                    <div class="username_title">price</div>
+                </div>
+                <div class="user_crud_user_type">
+                    <div class="username_title">final price</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">upload date</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">Update</div>
+                </div>
+                <div class="user_crud_edit_button">
+                    <div class="username_title">Delete</div>
+                </div>
+            </div>
+            <div class="user_crud_main_grid product_crud_main_grid_variaty">
+                <?php 
+                    $products_result = mysqli_query($connection, "SELECT * FROM products");
+                    if($products_result){
+                        while($products_row = mysqli_fetch_assoc($products_result)){
+                            $id_product_result=$products_row['product_id'];
+                            $main_img=$products_row['main_photo'];
+                            $product_name=$products_row['product_name'];
+                            $publish_date=$products_row['time'];
+                            $product_price=$products_row['product_price'];
+                            $product_final_price=$products_row['final_price'];
+                            if($product_price == $product_final_price){ 
+                                $match_color_selector = "matched_prices_color";
+                                $match_color_selector_final = "matched_prices_color";
+                            }else if($product_price !=  $product_final_price){
+                                $match_color_selector = "matched_prices_color";
+                                $match_color_selector_final = "umatched_prices_color";
+                            }
+                            echo '
+                            <div class="user_crud_user_id">
+                                <div class="first_answer">'.$id_product_result.'</div>
+                            </div>
+                            <div class="user_crud_user_name">
+                                <img src=img/'.$main_img.' alt="product img" class="product_crud_img_box">
+                            </div>
+                            <div class="user_crud_user_email">
+                                <div class="first_answer string_counter">'.$product_name.'</div>
+                            </div>
+                            <div class="user_crud_user_password">
+                                <div class="first_answer '.$match_color_selector.'">'.$product_price.'$</div>
+                            </div>
+                            <div class="user_crud_user_type">
+                                <div class="first_answer support_ticket_color '.$match_color_selector_final.'" id="userType">'.$product_final_price.'$</div>
+                            </div>
+                            <div class="user_crud_user_password">
+                                <div class="first_answer">'.$publish_date.'</div>
+                            </div>
+                            <div class="user_crud_edit_button">
+                                <button class="custom_for_button btn_9"><a href="editproduct.php? editproduct='.$id_product_result.'">Edit</a></button>
+                            </div>
+                            <div class="user_crud_edit_button">
+                                <button class="custom_for_button btn_9"><a href="delete_product.php? deleteproductid='.$id_product_result.'">Delete</a></button>
+                            </div>
+                            ';
+                        }
+                    }
+                ?>
+            </div>
+        </div>
         <div class="curd_user_add_grid">
             <div class="user_crud_add_user">
                 <a href="crudadduser.php">
@@ -295,8 +391,7 @@
                 </a>
             </div>
         </div>
-        
-        <div class="product_crud">PRODUCTS CRUD</div>
+    
         <div class="second_chart_to_do_list">
             <div class="second_chart">SECOND CHART</div>
             <div class="to_do_list">TO DO LIST</div>

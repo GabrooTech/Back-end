@@ -65,5 +65,5 @@
         </div>
     </footer>
     <script src="main.js"></script>
-    <script src="regform.js"></script>
+    <!-- <script src="regform.js"></script> -->
 </body>

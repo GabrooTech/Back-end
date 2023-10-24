@@ -120,8 +120,8 @@
             </div>
         </div>
     </div>
-
+    <script src="regform.js"></script>
     <?php
-    include('footer.php'); 
+    // include('footer.php'); 
     ?>
 </html>
