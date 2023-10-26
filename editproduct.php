@@ -26,17 +26,28 @@
     $product_description = $product_row['product_description'];
     $time = $product_row['time'];
         if(isset($_POST['submit'])){
-            $main_img = $_POST['main_photo'];
+            // $test = 'main_photo';
+            if($_POST['main_photo'] != $main_img && $_POST['main_photo'] != ""){
+                $main_img = $_POST['main_photo'];
+            }
             $product_name = $_POST['product_name'];
             $product_price = $_POST['product_price'];
             $link_word = $_POST['link_word'];
             $off_price = $_POST['off_price'];
             $final_price = $_POST['final_price'];
             $dominant_color = $_POST['dominant_color'];
-            $second_img = $_POST['second_img'];
-            $third_img = $_POST['third_img'];
-            $fourth_img = $_POST['fourth_img'];
-            $fifth_img = $_POST['fifth_img'];
+            if($_POST['second_img'] != $second_img && $_POST['second_img'] != ""){
+                $second_img = $_POST['second_img'];
+            }
+            if($_POST['third_img'] != $third_img && $_POST['third_img'] != ""){
+                $third_img = $_POST['third_img'];
+            }
+            if($_POST['fourth_img'] != $fourth_img && $_POST['fourth_img'] != ""){
+                $fourth_img = $_POST['fourth_img'];
+            }
+            if($_POST['fifth_img'] != $fifth_img && $_POST['fifth_img'] != ""){
+                $fifth_img = $_POST['fifth_img'];
+            }
             $product_description = $_POST['product_description'];
             $time = $_POST['time'];
             $sql = "UPDATE products SET main_photo='$main_img', product_name='$product_name', product_price='$product_price', link_word='$link_word', 
@@ -62,11 +73,12 @@
         <form method="POST">
             <div class="edit_product_container">
                 <div class="edit_product_container_imgs_container">
+                <h3 class="add_product_edit_entering_sentence">Edit product enviromant</h3>
                     <div class="edit_product_container_maing_img">
                         <h3>
-                            <option class="add_product_main_img_upload_box" id="drop_box" onclick="upload()" value="<?php echo htmlspecialchars($main_img)?>"
+                            <option class="add_product_main_img_upload_box" id="drop_box" onclick="upload()" 
                             style="background-image: url(img/<?php echo htmlspecialchars($main_img)?>)"></option>
-                            <input type="file" class="img_input" id="input_file" name="main_photo" value="<?php echo htmlspecialchars($main_img)?>">
+                            <input type="file" class="img_input" id="input_file" name="main_photo" hidden>
                         </h3>
                     </div>
                     <div class="edit_product_container_secondary_img_grid add_product_edit_secondary_grid">
@@ -115,8 +127,11 @@
                         </div>
                         <div>
                             <label for="username" class="add_product_edit_second_part_label_field">dominant_color</label>
-                            <input type="text" name="dominant_color" class="add_product_edit_second_part_input_field" value="<?php echo htmlspecialchars($dominant_color)?>">
+                            <input type="text" name="dominant_color" id="dominant_color_output" class="add_product_edit_second_part_input_field" value="<?php echo htmlspecialchars($dominant_color) ?>">
                         </div>
+                    </div>
+                    <div class="add_product_edit_description_box">
+                        <textarea name="description" id="description" class="add_product_input_textarea" placeholder="Please enter description of product"><?php echo htmlspecialchars($product_description)?></textarea>
                     </div>
                     <?php echo '<button class="button_test add_product_edit_submit_button" type="submit" name="submit" value="submit" href="editproduct.php? editproduct='.$id_product_result.'">
                       Update
@@ -133,7 +148,7 @@
         </div>
     </div>
     
-    <script src="imgoutput.js"></script>
+    <script src="edit_product.js"></script>
     <script src="dominantColor.js"></script>
     <?php
     include('footer.php'); 

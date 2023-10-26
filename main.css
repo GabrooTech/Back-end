@@ -2693,7 +2693,7 @@ footer{
     border: 2px dashed #57556a;
     width: 600px;
     height: 400px;
-    margin-top: 100px;
+    margin-top: 60px;
     flex-direction: column;
     border-radius: 15px;
     transition: 0.3s ease-in-out;
@@ -3062,6 +3062,54 @@ grid-row-gap: 0px;
 .add_product_edit_submit_button:hover{
     background-color: black;
     color: white;
+}
+.add_product_edit_description_box{
+    margin-top: 100px;
+}
+.add_product_edit_entering_sentence{
+    margin-top: 60px;
+    font-size: 25px;
+    font-family: cursive;
+}
+.add_product_brake_point_container{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+.add_product_brake_point_container .main_list{
+    width: 99%;
+}
+.main_list_name_brake_point{
+    font-size: 26px;
+}
+.main_list_brake_point{
+    margin-top: 100px;
+}
+.brake_point_strong_pc{
+    color: #e76924;
+}
+.brake_point_strong_server{
+    color: #b3e0ff;
+}
+.brake_point_strong_accessories{
+    color: #6dcfe9;
+}
+.brake_point_strong_md{
+    color: #fb7ca5;
+}
+.brake_point_strong_sh{
+    color: #5fb2f4;
+}
+.brake_point_strong_of{
+    color: #4e54a3;
+}
+.add_product_hidden{
+    display: none;
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -3693,7 +3741,7 @@ grid-row-gap: 0px;
 }
 @media (max-width: 360px) {
     .add_product_edit_secondary_img_fix{
-        width: 100%;
+        width: 300px;
     }
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -3854,7 +3902,6 @@ grid-row-gap: 0px;
   }
   .user_crud_main_grid::-webkit-scrollbar {
     width: 16px;
-    /* border-radius: 15px; */
   }
 
   .user_crud_main_grid::-webkit-scrollbar-track {
@@ -3866,9 +3913,32 @@ grid-row-gap: 0px;
     background-color: #141134;
     border-radius: 10px;
     border: 3px solid white;
-    /* border-radius: 15px; */
   }
   .user_crud_main_grid  ::-webkit-scrollbar-thumb:hover {
+    background-color: #59539c;
+    border-radius: 10px;
+  }
+  .product_crud_main_grid_variaty{
+    scrollbar-width: auto;
+    scrollbar-color: #141134 #111111;
+  }
+  .product_crud_main_grid_variaty::-webkit-scrollbar {
+    width: 16px;
+    /* border-radius: 15px; */
+  }
+
+  .product_crud_main_grid_variaty::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 15px;
+  }
+
+  .product_crud_main_grid_variaty::-webkit-scrollbar-thumb {
+    background-color: #141134;
+    border-radius: 10px;
+    border: 3px solid white;
+    /* border-radius: 15px; */
+  }
+  .product_crud_main_grid_variaty::-webkit-scrollbar-thumb:hover {
     background-color: #59539c;
     border-radius: 10px;
     /* border: 3px solid #111111; */
@@ -3911,7 +3981,7 @@ grid-row-gap: 0px;
    1. ავამუშავოთ search enginge (done)
    2. ავამუშავოთ paginator
    3. ავამუშავოთ filter
-   4. dashboard დან დავამატოთ დამატების ფუნქცია 
+   4. dashboard დან დავამატოთ დამატების ფუნქცია (done)
    5. გამოვიტანოთ dashboard ის ადგილებში
    6. cart system integration
    7. payment into sql

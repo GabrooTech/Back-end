@@ -29,6 +29,7 @@ function getDominantColor(imageObject, ctx) {
 
           var dominantColorNow = getDominantColor(image, ctx);
           var styleText = document.getElementById("dominant_color_output").innerHTML = dominantColorNow;
+          var styleText = document.getElementById("dominant_color_output").value = dominantColorNow;
           var styleElement = document.createElement("style");
           styleElement.innerText = styleText;
           document.head.appendChild(styleElement);
