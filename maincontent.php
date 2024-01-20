@@ -29,7 +29,7 @@
             <div class="main_list_name main_list_name_color_smhome">SMART HOME</div>
         </div>
         <div class="item_6 main_list_item">
-            <a href="#"></a>
+            <a href="mobiledevice.php"></a>
             <img src="img\mobile.webp" alt="Check your internet connection" class="list_img">   
             <div class="main_list_name main_list_name_color_md">MOBILE DEVICE </div>
         </div>

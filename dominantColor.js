@@ -49,13 +49,13 @@ var off_price = document.querySelector(".js_off_price").addEventListener("change
 function changePirce(){
   var x = document.querySelector(".js_price")
   x.value = x.value;
-  console.log(x.value)
+  // console.log(x.value)
   price_output = x.value;
 }
 function changeOffPirce(){
   var y = document.querySelector(".js_off_price")
   y.value = y.value;
-  console.log(y.value)
+  // console.log(y.value)
   off_price_output = y.value
   final_price = (off_price_output / 100) * price_output;
   final_price = price_output - final_price;
@@ -63,4 +63,4 @@ function changeOffPirce(){
   final_price_output.innerHTML = final_price;
   final_price_output.value = final_price;
 }
-console.log(final_price)
+// console.log(final_price)

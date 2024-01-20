@@ -1,7 +1,7 @@
 <?php
 
 
-
+include('coockie.php');
 ?>
     <footer>
         <div class="footer_container">
@@ -65,5 +65,6 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script src="coockie.js"></script>
     <!-- <script src="regform.js"></script> -->
 </body>

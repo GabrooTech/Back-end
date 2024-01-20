@@ -13,7 +13,7 @@
     = $off_price = $final_price = $dominant_color = $second_img
     = $third_img = $fourth_img = $fifth_img = $description = $product_type = '';
     $errors = array('main_photo'=>'', 'product_name'=>'', 'product_price'=>'', 'link_word'=>'', 'off_price'=>'', 'second_img'=>'',
-    'third_img'=>'', 'fourth_img'=>'', 'fifth_img'=>'', 'description'=>'');
+    'third_img'=>'', 'fourth_img'=>'', 'fifth_img'=>'', 'product_description'=>'');
     if(isset($_POST['submit'])){
         // main_photo verification
         if(empty($_POST['main_photo'])){
@@ -71,10 +71,10 @@
             $fifth_img = $_POST['fifth_img'];
         }
         // description verification
-        if(empty($_POST['description'])){
-            $errors['description'] = 'Please input description of product <br />';
+        if(empty($_POST['product_description'])){
+            $errors['product_description'] = 'Please input description of product <br />';
         }else{
-            $description = $_POST['description'];
+            $description = $_POST['product_description'];
         }  
         // final price
         $final_price = $_POST['final_price'];
@@ -94,7 +94,7 @@
             $third_img = mysqli_escape_string($connection, $_POST['third_img']);
             $fourth_img = mysqli_escape_string($connection, $_POST['fourth_img']);
             $fifth_img = mysqli_escape_string($connection, $_POST['fifth_img']);
-            $description = mysqli_escape_string($connection, $_POST['description']);
+            $description = mysqli_escape_string($connection, $_POST['product_description']);
             $product_type = mysqli_escape_string($connection, $_POST['product_type']);
             $sql = "INSERT INTO products(main_photo, product_name, product_price, link_word,
             off_price, final_price,  dominant_color, second_img, third_img,
@@ -120,9 +120,10 @@
     include('aside.php');
     ?>
     <div class="user_crud_container">
-        <h1 class="user_crud_container_intor_text">Add <strong class="brake_point_strong_pc">PC</strong> Proudct Page</h1>
+        <h1 class="user_crud_container_intor_text">Add <strong class="brake_point_strong_of">Office</strong> Proudct Page</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="add_product_form_main_class">
-            <option class="add_product_main_img_upload_box" id="drop_box" onclick="upload()" value="<?php echo htmlspecialchars($main_photo)?>"></option>
+        <option class="add_product_main_img_upload_box" id="drop_box" onclick="upload()" value="<?php echo htmlspecialchars($main_photo)?>"
+            style="background-image: url(img/<?php echo htmlspecialchars($main_photo)?>)"></option>
             <input type="file" class="img_input" id="input_file" name="main_photo" hidden>
             <i class='bx bx-upload upload_img_add_product'></i>
             <p class="upload_img_add_product_text">please upload the main image</p>
@@ -157,49 +158,49 @@
             <div class="add_product_additional_png_grid">
                 <div class="add_product_img_grid_outer_source">
                     <option class="add_product_main_img_upload_box add_product_additional_img_upload_box" id="drop_box_second" onclick="uploadSecond()"
-                    value="<?php echo htmlspecialchars($second_img)?>"></option>
+                    value="<?php echo htmlspecialchars($second_img)?>" style="background-image: url(img/<?php echo htmlspecialchars($second_img)?>)"></option>
                     <div class="add_img_outer_grid_inner_second_box">
                         <input type="file" class="img_input" id="input_file_second" name="second_img" hidden>
                         <i class='bx bx-upload second_upload_img_add_product'></i>
                         <p class="second_upload_img_add_product_text">please upload the second image</p>
-                        <div class="red-text add_product_product_error"><?php echo $errors['second_img']; ?></div>
+                        <div class="red-text add_product_product_error second_img_error"><?php echo $errors['second_img']; ?></div>
                     </div>
                 </div>
                 <div class="add_product_img_grid_outer_source">
                     <option class="add_product_main_img_upload_box add_product_additional_img_upload_box" id="drop_box_third" onclick="uploadThird()" 
-                    value="<?php echo htmlspecialchars($third_img)?>"></option>
+                    value="<?php echo htmlspecialchars($third_img)?>" style="background-image: url(img/<?php echo htmlspecialchars($third_img)?>)"></option>
                     <div class="add_img_outer_grid_inner_second_box">
                         <input type="file" class="img_input" id="input_file_third" name="third_img" hidden>
                         <i class='bx bx-upload third_upload_img_add_product'></i>
                         <p class="third_upload_img_add_product_text">please upload the third image</p>
-                        <div class="red-text add_product_product_error"><?php echo $errors['third_img']; ?></div>
+                        <div class="red-text add_product_product_error third_img_error"><?php echo $errors['third_img']; ?></div>
                     </div>
                 </div>
                 <div class="add_product_img_grid_outer_source">
                     <option class="add_product_main_img_upload_box add_product_additional_img_upload_box" id="drop_box_forth" onclick="uploadForth()"
-                    value="<?php echo htmlspecialchars($fourth_img)?>"></option>
+                    value="<?php echo htmlspecialchars($fourth_img)?>" style="background-image: url(img/<?php echo htmlspecialchars($fourth_img)?>)"></option>
                     <div class="add_img_outer_grid_inner_second_box">
                         <input type="file" class="img_input" id="input_file_forth" name="fourth_img" hidden>
                         <i class='bx bx-upload forth_upload_img_add_product'></i>
                         <p class="forth_upload_img_add_product_text">please upload the fourth image</p>
-                        <div class="red-text add_product_product_error"><?php echo $errors['fourth_img']; ?></div>
+                        <div class="red-text add_product_product_error forth_img_error"><?php echo $errors['fourth_img']; ?></div>
                     </div>
                 </div>
                 <div class="add_product_img_grid_outer_source">
                     <option class="add_product_main_img_upload_box add_product_additional_img_upload_box" id="drop_box_fifth" onclick="uploadFifth()" 
-                    value="<?php echo htmlspecialchars($fifth_img)?>"></option>
+                    value="<?php echo htmlspecialchars($fifth_img)?>" style="background-image: url(img/<?php echo htmlspecialchars($fifth_img)?>)"></option>
                     <input type="file" class="img_input" id="input_file_fifth" name="fifth_img" hidden>
                     <div class="add_img_outer_grid_inner_second_box">
                         <i class='bx bx-upload fifth_upload_img_add_product'></i>
                         <p class="fifth_upload_img_add_product_text">please upload the fifth image</p>
-                        <div class="red-text add_product_product_error"><?php echo $errors['fifth_img']; ?></div>
+                        <div class="red-text add_product_product_error fifth_img_error"><?php echo $errors['fifth_img']; ?></div>
                     </div>
                 </div>
             </div>
             <div class="add_product_deescription_text_area">
-                <textarea name="description" id="description" class="add_product_input_textarea"
-                placeholder="Please enter description of product" value="<?php echo htmlspecialchars($description)?>"></textarea>
-                <div class="red-text add_product_product_error"><?php echo $errors['description']; ?></div>
+                <textarea name="product_description" id="description" class="add_product_input_textarea"
+                placeholder="Please enter description of product"><?php echo htmlspecialchars($description)?></textarea>
+                <div class="red-text add_product_product_error"><?php echo $errors['product_description']; ?></div>
             </div>
             <div class="last_output_add_product_container">
                 <h1 class="dominant_intro_text_add_product">Output of dominant color in Img</h1>

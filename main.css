@@ -642,9 +642,9 @@ transition: 1s all ease;
     background: #47418a;
     border-radius: 20px;
     overflow: hidden;
-    /* box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 105px -8px rgba(0,0,0,0.75); */
+    box-shadow: 2px -2px 47px -13px rgba(0,0,0,0.77);
+    -webkit-box-shadow: 2px -2px 47px -13px rgba(0,0,0,0.77);
+    -moz-box-shadow: 2px -2px 47px -13px rgba(0,0,0,0.77);
     border: 1px solid grey;
 }
 .card::before{
@@ -883,7 +883,7 @@ transition: 1s all ease;
     text-align: center;
     float: right;
     display: flex;
-    background-color: burlywood;
+    background: linear-gradient(320deg, rgba(90,84,157,1) 0%, rgba(40,59,91,1) 100%);
     color: white;
     z-index: 1;
     margin-left: 10px;
@@ -891,6 +891,9 @@ transition: 1s all ease;
     justify-content: center;
     margin-right: 10px;
     transition: 0.3s ease-in-out;
+    box-shadow: 2px -2px 131px 37px  rgb(90,84,157);
+    -webkit-box-shadow: 2px -2px 131px 37px  rgb(90,84,157);
+    -moz-box-shadow: 2px -2px 131px 37px  rgb(90,84,157);
 }
 .card_section{
     border-radius: 10px;
@@ -2446,9 +2449,7 @@ footer{
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-
     width: 400px;
-    height: 50px;
 	border-radius: 20px;
 }
 .check-out-elemnts{
@@ -2485,6 +2486,7 @@ footer{
 	padding: 10px;
 	color: black;
 	font-size: 20px;
+    display: flex;
 }
 .check-out-elemnt-second-div-price-tag{
 	border: 3px solid #11101d;
@@ -2492,10 +2494,9 @@ footer{
 	margin-left: -3px;
     margin-right: -3px;
     margin-bottom: -3px;
-}
-.check-out-elemnt-second-div-price-tag-element{
-	text-align: center;
-    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .check-out-elemnt-second-div-price-tag-element{
 	text-align: center;
@@ -2652,7 +2653,6 @@ footer{
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 0px;
-    padding: 60px;
     align-items: center;
     transition: 0.3s;
 }
@@ -3110,6 +3110,197 @@ grid-row-gap: 0px;
 }
 .add_product_hidden{
     display: none;
+}
+.sale_checker_true{
+    display: flex;
+}
+.sale_checker_false{
+    display: none;
+}
+.brif_description_add_product_var{
+    background: #f5f7fd;
+    border: 1px dashed #3b357a;
+}
+.brif_description_add_product_var_inner_grid{
+    display: grid;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 0px;
+    padding: 60px;
+    align-items: center;
+    transition: 0.3s;
+    gap: 30px;
+}
+.grif_escription_inner_add_product_fixer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.bxs-plus-circle{
+    float: right;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.bxs-plus-circle:hover{
+    color: #3b357a;
+}
+.add_product_remove_list_grid{
+    display: flex;
+    justify-content: center;
+}
+.bxs-minus-circle{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.bxs-minus-circle:hover{
+    color: #3b357a;
+}
+.brif_description_input{
+    border: none;
+    border-bottom: 2px solid silver;
+    outline: none;
+    width: 80%;
+    font-family: sans-serif;
+    transition: 0.3s ease-in-out;
+    background-color: #f5f7fd;
+    margin-top: -19px;
+    z-index: 1;
+    margin-top: 10px;
+}
+.brif_description_content_box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.brif_description_reason_box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.newPosition{
+    margin-left: 100px;
+}
+.edit{
+    display: flex;
+    font-family: cursive;
+    cursor: pointer;
+    color: #623185;
+}
+.delete{
+    font-family: cursive;
+    display: flex;
+    cursor: pointer;
+    color: #e14040;
+}
+.command_on_brif_desc{
+    display: flex;
+    gap: 20px;
+}
+/* .summed_brif_infromation{
+    display: none;
+}
+.summed_brif_infromation_desc{
+    display: none;
+} */
+.coockie_alert{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    z-index: 1001;
+    position: fixed;
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+.coockie_box{
+    margin: 65px auto;
+    width: 400px;
+    /* max-width: 400px;
+    min-height: 300px; */
+    background-color: rgba(255,255,255,1);
+    padding: 40px;
+    margin-top: 200px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    backdrop-filter: blur(5px);
+    -webkit-box-shadow: 0px 0px 70px -20px rgba(255, 255, 255, 0.42);
+    -moz-box-shadow: 0px 0px 70px -20px rgba(255, 255, 255, 0.42);
+    box-shadow: 0px 0px 70px -20px rgba(255, 255, 255, 0.42);
+}
+.coockie_icon_box{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #d9933d;
+}
+.disband_coockie_box{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.disband_icon:hover{
+    color: #d9933d;
+}
+.disband_icon{
+    transition: 0.3s ease-in-out;
+    columns: white;
+    cursor: pointer;
+}
+.font_system_ui{
+    font-family: system-ui;
+}
+.coockies_information{
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-family: ui-monospace;
+}
+.coockie_color{
+    color: #d9933d;
+}
+.accept_coockie_box{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.accept_coockie{
+    transition: 0.3s ease-in-out;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #d9933d;
+    outline: none;
+    background: #d9933d;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #d9933d, 0 0 25px #d9933d, 0 0 50px #d9933d, 0 0 100px #d9933d;
+    cursor: pointer;
+}
+.accept_coockie:hover{
+    background: none;
+    color: #d9933d;
+    box-shadow: 0 0 0px , 0 0 0px , 0 0 0px , 0 0 0px ;
+}
+.decline_coockie{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-family: monospace;
+}
+body:has(.coockie_alert) {
+    overflow-y: hidden !important;
+  }
+.brif_second_description_label{
+    text-align: center;
+    font-family: cursive;
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -3683,6 +3874,21 @@ grid-row-gap: 0px;
         display: flex;
         flex-direction: column;
     }
+    .brif_description_add_product_var_inner_grid{
+        padding: 40px;
+    }
+    .brif_description_add_product_var{
+        width: 90%;
+    }
+    .brif_description_input{
+        width: 100%;
+    }
+    .brif_description_label {
+        font: 15px;
+    }
+        /* .brif_description_add_product_var_inner_grid{
+        width: 100%;
+    } */
 }
 @media (max-width: 460px) {
     .add_product_text_content_container{
@@ -3742,6 +3948,31 @@ grid-row-gap: 0px;
 @media (max-width: 360px) {
     .add_product_edit_secondary_img_fix{
         width: 300px;
+    }
+}
+@media (max-width: 400px) {
+    .brif_description_input{
+        margin-top: -5px;
+    }
+    .brif_description_label:has(+ .brif_description_input:focus){
+        margin-left: 0;
+    }  
+    .brif_description_add_product_var_inner_grid {
+        grid-column-gap: 15px;
+    }
+}
+@media (max-width: 490px) {
+	.coockie_box{
+		width: 300px;
+	}
+}
+@media (max-width: 400px) {
+	.coockie_box{
+		width: 200px;
+        margin-top: 110px;
+	}
+    .coockies_content_box{
+        scale: 0.8;
     }
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -3986,12 +4217,12 @@ grid-row-gap: 0px;
    6. cart system integration
    7. payment into sql
    8. payment page
-   9. coockies and coockie page.
+   9. coockies and coockie page. (done)
    10. modern load look
    11. add animations for better ui
    12. integrate outside look in dashboard of sales and trending
-   13. view more details for trending and sale showcase all kind of saled products, brnad and trending
-   14. add guset system from loaclstorage
+   13. view more details for trending and sale showcase all kind of saled products, brnand and trending
+   14. add guset system from loaclstorage (half_done)
    15. within use of guest strengthen cybersecurity
    16. add 2 working charts in dashboard.
    17. start outputing exact data into dashboard

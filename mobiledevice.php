@@ -8,7 +8,7 @@
     <?php
     include('head.php');
     include('aside.php');
-    include('accfilter.php');
+    include('filter.php');
     ?>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <div class="product_list_container">
@@ -25,7 +25,7 @@
                         while($products_row = mysqli_fetch_assoc($products_result)){
                             $product_type = $products_row['product_type'];
                             $product_id = $products_row['product_id'];
-                            if($product_type == 'Accessories'){
+                            if($product_type == 'Mobile device'){
                                 $id_product_result=$products_row['product_id'];
                                 $main_img=$products_row['main_photo'];
                                 $product_name=$products_row['product_name'];

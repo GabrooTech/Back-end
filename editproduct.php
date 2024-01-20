@@ -25,6 +25,8 @@
     $fifth_img = $product_row['fifth_img'];
     $product_description = $product_row['product_description'];
     $time = $product_row['time'];
+    $errors = array('main_photo'=>'', 'product_name'=>'', 'product_price'=>'', 'link_word'=>'', 'off_price'=>'', 'second_img'=>'',
+    'third_img'=>'', 'fourth_img'=>'', 'fifth_img'=>'', 'product_description'=>'');
         if(isset($_POST['submit'])){
             // $test = 'main_photo';
             if($_POST['main_photo'] != $main_img && $_POST['main_photo'] != ""){
@@ -48,7 +50,11 @@
             if($_POST['fifth_img'] != $fifth_img && $_POST['fifth_img'] != ""){
                 $fifth_img = $_POST['fifth_img'];
             }
-            $product_description = $_POST['product_description'];
+            if(empty($_POST['product_description'])){
+                $errors['product_description'] = 'The description is required <br />';
+            }else{
+                $product_description = $_POST['product_description'];
+            }
             $time = $_POST['time'];
             $sql = "UPDATE products SET main_photo='$main_img', product_name='$product_name', product_price='$product_price', link_word='$link_word', 
             off_price='$off_price', final_price='$final_price', dominant_color='$dominant_color', second_img='$second_img', third_img='$third_img', 
@@ -131,7 +137,8 @@
                         </div>
                     </div>
                     <div class="add_product_edit_description_box">
-                        <textarea name="description" id="description" class="add_product_input_textarea" placeholder="Please enter description of product"><?php echo htmlspecialchars($product_description)?></textarea>
+                        <textarea name="product_description" id="description" class="add_product_input_textarea" placeholder="Please enter description of product"><?php echo htmlspecialchars($product_description)?></textarea>
+                        <div class="red-text add_product_product_error"><?php echo $errors['product_description']; ?></div>
                     </div>
                     <?php echo '<button class="button_test add_product_edit_submit_button" type="submit" name="submit" value="submit" href="editproduct.php? editproduct='.$id_product_result.'">
                       Update
